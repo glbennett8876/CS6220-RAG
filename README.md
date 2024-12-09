@@ -45,7 +45,7 @@ pip install semantic_router
 pip install jq
 ```
 
-## The Streamlit UI is callled with 
+# The Streamlit UI is callled with 
 ```sh
 streamlit run app.py
 ```
