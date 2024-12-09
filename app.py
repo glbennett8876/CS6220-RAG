@@ -18,30 +18,15 @@ def login():
 def main():
     st.title("Medical Question Answering System")
 
-    option = st.radio("", ["Demo Account", "Model"])
-
-    if option == "Demo Account":
-        hospital_data = demo.main()
-        st.write("--------\n Select Hospital")
-        selected_hospital = hospital_data['hospital'].iloc[0]
-        st.write(f"Analyzing data for hospital: {selected_hospital}")
+    
+    hospital_data = demo.main()
+    st.write("--------\n Select Hospital")
+    selected_hospital = hospital_data['hospital'].iloc[0]
+    st.write(f"Analyzing data for hospital: {selected_hospital}")
     # Prepare JSON data for the selected hospital
-        json_data = demo.prepare_json_data(hospital_data)
+    json_data = demo.prepare_json_data(hospital_data)
     # Call the implement function with the prepared JSON data
-        demo.implement(json_data, selected_hospital)
-
-
-    elif option == "Model":
-        uploaded_files = st.file_uploader("Upload Files", accept_multiple_files=True)
-        if uploaded_files:
-            framework = st.radio("", ["Langchain", "LLamaIndex"])
-
-            if framework == "Langchain":
-                implement_langchain(uploaded_files)
-
-            if framework == "LLamaIndex":
-                tools = llama_index_implementation.process_files(uploaded_files)
-                llama_index_implementation.query(tools)
+    demo.implement(json_data, selected_hospital)
 
 
 st.set_page_config(
