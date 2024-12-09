@@ -1,5 +1,5 @@
 # CS6220-RAG
-
+The commit history of the git is not representative of the work done by person on the project. This git was made after the project was completed, and thus the code base was already distributed amongst our local devices.
 ## Installations 
 
 ### Streamlit UI
