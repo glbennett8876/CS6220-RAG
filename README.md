@@ -44,6 +44,15 @@ pip install semantic_router
 ```sh
 pip install jq
 ```
+### PySyft
+```sh
+pip install syft
+```
+
+### Working with dataframes
+```sh
+pip install pandas
+```
 
 # The Streamlit UI is called with 
 ```sh
